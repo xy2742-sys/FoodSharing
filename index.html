@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f6f2" />
+  <title>Gather — Good food, good neighbors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Gather home"><span class="brand-mark">g<span>·</span></span><span>gather</span></a>
+      <div class="side-label">YOUR COMMUNITY</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="discover"><span class="nav-icon">⌂</span>Discover</button>
+        <button class="nav-item" data-page="schedule"><span class="nav-icon">▦</span>Schedule</button>
+        <button class="nav-item" data-page="share"><span class="nav-icon">＋</span>Share Food</button>
+        <button class="nav-item" data-page="my-pickups"><span class="nav-icon">◷</span>My Pickup <span class="nav-count" id="pickup-count">2</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="impact-card"><div class="impact-leaf">✳</div><strong>Good food goes further.</strong><span>Every shared meal brings neighbors closer.</span><a href="#community">Meet your community <span>↗</span></a></div>
+        <div class="profile-mini"><div class="avatar">JD</div><div><strong>Jordan Davis</strong><span id="profile-role">Neighbor</span></div><button class="more-btn" aria-label="Profile options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">g<span>·</span></span> gather</div>
+        <div class="location-pill"><span class="pin">⌖</span><span>Brooklyn, NY</span><span class="chevron">⌄</span></div>
+        <div class="top-actions"><button class="avatar avatar-small" data-action="account" aria-label="Account and role settings">JD</button></div>
+      </header>
+      <div class="page-wrap" id="page-content"></div>
+    </main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button class="mobile-nav-item active" data-page="discover"><span>⌂</span>Discover</button>
+    <button class="mobile-nav-item" data-page="schedule"><span>▦</span>Schedule</button>
+    <button class="mobile-nav-item mobile-add" data-page="share"><span>＋</span><small>Share Food</small></button>
+    <button class="mobile-nav-item" data-page="my-pickups"><span>◷</span>My Pickup</button>
+  </nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden><section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
